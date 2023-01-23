@@ -1,5 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
+
+import NavDropdown from 'react-bootstrap/NavDropdown';
 export default function Navbar(props) {
   const mystyle={
     backgroundColor:props.Navcolor
@@ -22,14 +24,24 @@ export default function Navbar(props) {
       </li>
     
       <li className="nav-item dropdown">
-        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         Services
-        </a>
-        <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a className="dropdown-item" href="#">Action</a>
-          <a className="dropdown-item" href="#">Another action</a>
-          <a className="dropdown-item" href="#">Something else here</a>
-        </div>
+     
+
+      <NavDropdown
+              id="nav-dropdown-dark-example"
+              title="Dropdown"
+              menuVariant="dark"
+            >
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
+
       </li>
       <li className="nav-item">
         <a className="nav-link" href="#">Contact Us</a>
